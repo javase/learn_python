@@ -1,0 +1,5 @@
+t = (1)
+print('tuple(1):%s' %t)
+t1 = (1,)
+print('tuple(1,):')
+print(t1)
