@@ -6,6 +6,12 @@ Month = Enum('Month',('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct
 
 for name,member in Month.__members__.items():
 	print('%s => %s,%s' %(name,member,member.value))
+
+print('-----------------')
+
+# 另一种遍历枚举的方法
+for month in Month:
+	print('%s => %s' %(month,month.value))
 	
 @unique
 class Weekday(Enum):
