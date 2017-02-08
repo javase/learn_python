@@ -21,5 +21,9 @@ class Chain(object):
 	def __str__(self):
 		return self._path
 	# __repr__==__str__
+	# 传入的参数为：user
+	def __call__(self,user):
+		return self.__getattr__(":" + user)
 
 print('Chain().status.user.timeline.list:',Chain().status.user.timeline.list)
+print('Chain().users(\'michael\').repos:',Chain().users('michael').repos)
