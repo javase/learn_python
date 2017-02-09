@@ -33,7 +33,7 @@ with open('E:/技术/学习研究/Python/my script/test.txt','r',encoding='gbk',
 
 from datetime import datetime	
 # 写文件
-with open('E:/技术/学习研究/Python/my script/test.txt','w',encoding='gbk') as fw:
+with open('E:/技术/学习研究/Python/my script/test.txt','w',encoding='utf-8') as fw:
 	for i in range(50):
 		s = '写入第' + str(i+1) + '行 '+datetime.now().strftime('%Y-%m-%d %H:%M:%S')+'\n'
 		print(s)
