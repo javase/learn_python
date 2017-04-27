@@ -1,1 +1,0 @@
-print('help(abs):%s' %(help(abs)))
