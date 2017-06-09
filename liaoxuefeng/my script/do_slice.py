@@ -17,3 +17,5 @@ print('什么都不写，复制一个List: L[:]:',L[:])
 print('字符串也可以切片 \'ABCDEFG\'[:3]:','ABCDEFG'[:3])
 print('\'ABCDEFG\'[::2]:','ABCDEFG'[::2])
 print('倒着输出整个列表：L[::-1]:',L[::-1])
+c = 'column10'
+print(c[0:6])

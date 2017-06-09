@@ -1,11 +1,9 @@
 import urllib
 from urllib.request import urlopen
 
+a = ['abcdlel', 'allsl']
+str = a[0]
+end = str.index('e')
 
-try:
-    html = urlopen("http://ipythonscraping.com/pages/page1.html")
-except Exception as e:	
-    print('打开出错',e)	
-	
-	
-# html = urlopen("http://ipythonscraping.com/pages/page1.html")	
+
+# html = urlopen("http://ipythonscraping.com/pages/page1.html")
