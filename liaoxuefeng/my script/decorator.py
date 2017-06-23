@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+import functools
+
+
 def now():
     print('2017.01.16')
 
@@ -9,11 +12,24 @@ print('函数的名字，注意下划线是两根，f.__name__：', f.__name__)
 
 
 def log(func):
+    @functools.wraps(func)
     def wrapper(*args, **kw):
         print('call %s():' % func.__name__)
         return func(*args, **kw)
 
     return wrapper
+
+
+def log3(text):
+    def decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kw):
+            print('%s %s():' % (text, func.__name__))
+            return func(*args, **kw)
+
+        return wrapper
+
+    return decorator
 
 
 print('\n\n---------------------------------')
@@ -40,7 +56,7 @@ def log2(text):
     return decorator
 
 
-@log2('excute')
+@log3('excute log3')
 def now3():
     print('2017年1月16日 16:53:32')
 
